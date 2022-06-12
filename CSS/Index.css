@@ -1,0 +1,318 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+     z-index: 1;
+     background: linear-gradient(rgb(72, 195, 239),rgb(155, 196, 229));
+}
+.home,.about,.project,.contact{
+    border-radius: 6px;
+    transition: 0.6s;
+}
+.home:hover,.about:hover,.project:hover,.contact:hover{
+    border-radius: 6px;
+   background-color: #ebf5fc;
+   color: #b8d5fe;
+   transition: 0.6s;
+
+}
+.jumbotron{
+    padding-top: 6rem ;
+    background: url(../images/Background.webp);
+    /* background-position: top; */
+    background-size: cover;
+}
+.jumbotron img{
+    width: 300px;
+    height: 300px;
+}
+/* .wave{
+    z-index: 2;
+} */
+#about{
+    padding-top: 50px;
+    
+}
+#about h2{
+    text-align: center;
+}
+#about ul{
+    list-style: none;
+}
+#projects{
+    background-color: deepskyblue;
+}
+section{
+    padding-top: 5rem;
+}
+
+.card{
+    position: relative;
+    width: 320px;
+    height: 440px;
+    box-shadow: inset 5px 5px 5px rgba(0,0,0,0.05),
+                inset -5px -5px -5px rgba(255, 255, 255, 0.5),
+                -5px -5px 5px rgba(255,255,255,0.5),
+                -5px -5px 5px rgba(255,255,255,0.5);
+    border-radius: 15px;            
+    margin: 30px;
+    /* background-color: aqua; */
+    font-family: 'poppins',sans-serif;
+}
+.card .box{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    left: 20px;
+    bottom: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    background-color: #ebf5fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.card:hover .box{
+    transform: translateY(-50px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    background: linear-gradient(45deg,#b8d5fe,#5b98f4);
+}
+.card .box .content{
+    padding: 20px;
+    text-align: center;
+}
+.card .box .content h2{
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(0,0,0,0.02);
+    transition: 0.5s;
+    pointer-events: none;
+
+}
+.card:hover .box .content h2{
+    color: rgba(0,0,0,0.05);
+}
+.card .box .content p{
+    font-size: 1rem;
+    font-weight: 300;
+    color: #777;
+    z-index: 1;
+    transition: 0.5s;
+}
+.card:hover .box .content p{
+    color: #fff;
+}
+.card .box .content img{
+    width:200px;
+    height: 130px;
+    padding-top: 23px;
+}
+#contact{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#contact .container .content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+#contact .container .content .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+#contact .container .content .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+#contact .container .content .contactInfo .box .icon{
+    min-width:60px ;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+    border: 1px solid black;
+}
+#contact .container .content .contactInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    flex-direction: column;
+    font-weight: 300;
+}
+#contact .container .content .contactInfo .box .text h3{
+    font-weight: 500;
+    color: #00bcd4;
+}
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    /* border: 2px solid #02aac0; */
+    height: 450px;
+    margin-top: 30px;
+}
+.contactForm h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom:2px solid #333 ;
+    outline: none;
+    resize: none;
+}
+.contactForm .inputBox label{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+}
+.contactForm .inputBox button{
+    position: absolute;
+    left: 0;
+    /* margin-left: 340px; */
+}
+.contactForm .inputBox input:blur ~ label,
+.contactForm .inputBox textarea:blur ~ label{
+    transform: translateX(20px);
+    transition: 0.5s;
+}
+.contactForm .inputBox input:focus ~ label,
+.contactForm .inputBox textarea:focus ~ label{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+    transition: 0.5s;
+}
+#email_error{
+    margin-top: 5px;
+    width: 345px;
+    font-size: 18px;
+    color: #c62828;
+    background: rgba(255,0,0,0.1);
+    text-align: center;
+    padding: 5px 8px;
+    border-radius: 3px;
+    border: 1px solid #ef9a9a;
+    display: none;
+}
+/* .contactForm .inputBox input:valid ~ label,
+.contactForm .inputBox textarea:valid ~ label{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+    transition: 0.5s;
+} */
+button {
+    font-family: inherit;
+    font-size: 20px;
+    background: royalblue;
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.2s;
+   }
+   
+   button span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+   }
+   
+   button svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+   }
+   
+   button:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+   }
+   
+   button:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+   }
+   
+   button:hover span {
+    transform: translateX(5em);
+   }
+   
+   button:active {
+    transform: scale(0.95);
+   }
+   
+   @keyframes fly-1 {
+    from {
+     transform: translateY(0.1em);
+    }
+   
+    to {
+     transform: translateY(-0.1em);
+    }
+   }
+@media (max-width: 991px){
+    .contact{
+        padding: 50px;
+    }
+    .content{
+        flex-direction: column;
+    }
+    .content .contactInfo{
+        margin-bottom: 40px;
+    }
+    .content .contactInfo{
+        width: 100%;
+    }
+}
+@media (max-width: 667px){
+    .contact{
+        padding: 30px;
+    }
+    .content{
+        flex-direction: column;
+    }
+    .content .contactInfo{
+        margin-bottom: 20px;
+    }
+    .content .contactInfo{
+        width: 50%;
+    }
+    button{
+        margin-right: 200px;
+    }
+    .contactForm{
+        width: 70%;
+    }
+}
