@@ -162,7 +162,7 @@ section{
     width: 40%;
     padding: 40px;
     /* border: 2px solid #02aac0; */
-    height: 450px;
+    height: 450px auto;
     margin-top: 30px;
 }
 .contactForm h2{
@@ -185,6 +185,7 @@ section{
     border-bottom:2px solid #333 ;
     outline: none;
     resize: none;
+    transition: 0.5s;
 }
 .contactForm .inputBox label{
     position: absolute;
@@ -199,21 +200,25 @@ section{
     left: 0;
     /* margin-left: 340px; */
 }
-.contactForm .inputBox input:blur ~ label,
-.contactForm .inputBox textarea:blur ~ label{
-    transform: translateX(20px);
-    transition: 0.5s;
-}
+
 .contactForm .inputBox input:focus ~ label,
-.contactForm .inputBox textarea:focus ~ label{
-    color: #e91e63;
+.contactForm .inputBox input:valid ~ label{
+    color: #c62828;
     font-size: 12px;
     transform: translateY(-20px);
     transition: 0.5s;
 }
-#email_error{
+.contactForm .inputBox textarea:focus ~ label,
+.contactForm .inputBox textarea:valid ~ label{
+    color: #c62828;
+    font-size: 12px;
+    transform: translateY(-20px);
+    transition: 0.5s;
+}
+
+
+#email_error,#nama_error,#pesan_error{
     margin-top: 5px;
-    width: 345px;
     font-size: 18px;
     color: #c62828;
     background: rgba(255,0,0,0.1);

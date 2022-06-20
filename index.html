@@ -51,7 +51,6 @@
             data-aos-easing="ease-in-sine">
               <ul>
                 <li>Nama : Zaidan Dziaulfawwaz</li>
-                <li>Age : 16</li>
                 <li>Place/Date of Birth : Bogor, 05 July 2006</li>
                 <li>Hobby : Basketball</li>
                 <li>Address : Bogor Permata Cimanggis RW19 RT03 D1/30</li>
@@ -60,7 +59,7 @@
             <div class="col-md-5 mt-4" data-aos="fade-left"
             data-aos-offset="300"
             data-aos-easing="ease-in-sine">
-             SD and SMP in Amalia School, SMK in Madinatul quran. Have studied about basic about HTML, CSS, and Javascript. Don't have any experience about works universe. Still study for self development. Feel confident about my CSS skills
+             SD and SMP in Amalia School, SMK in Madinatul quran. Have studied about basic about HTML, CSS, and Javascript. Feel confident about my CSS skills
             </div>
           </div>
         </div>
@@ -81,7 +80,7 @@
                 <div class="box">
                   <div class="content">
                     <h2>01</h2>
-                    <img src="./images/2022-02-03 (1).png" alt="project 1">
+                    <img src="./images/Screenshot 2022-06-20 134011.png" alt="project 1">
                    <p class="mt-2">My First Project</p>
                   </div>
                 </div>
@@ -93,7 +92,7 @@
                 <div class="box">
                   <div class="content">
                     <h2>02</h2>
-                    <img src="./images/2022-01-20.png" alt="project 2">
+                    <img src="./images/2022-02-03 (1).png" alt="project 2">
                    <p class="mt-2">My Second Project</p>
                   </div>
                 </div>
@@ -105,7 +104,7 @@
                 <div class="box">
                   <div class="content">
                     <h2>03</h2>
-                    <img src="./images/2021-11-13.png" alt="project 3">
+                    <img src="./images/Screenshot 2022-06-20 140247.png" alt="project 3">
                    <p class="mt-2">My Third Project</p>
                   </div>
                 </div>
@@ -153,26 +152,27 @@
               </div>
             </div>
           </div>
-          <div class="contactForm shadow-lg" data-aos="fade-up"
+          <div class="contactForm" data-aos="fade-up"
           data-aos-anchor-placement="top-bottom">
-            <form  class="login_form" action="home.html" method="post" name="form" onsubmit="return validated()">
+            <form  class="login_form" action="action.html" method="post" name="form" onsubmit="return validated()">
               <h2>Send Message</h2>
               <div class="inputBox">
-                <input type="text" name="nama" id="name" aria-describedby="name">
-                <label for="name" >Full Name</label>
+                <input type="text" name="nama" id="nama" aria-describedby="nama">
+                <label for="nama" >Full Name</label>
+                <div id="nama_error">Please fill your Full Name</div>
               </div>
               <div class="inputBox">
-                <input type="email" name="email" id="email" aria-describedby="email">
+                <input type="email" name="email" id="email" aria-describedby="email" >
                 <label for="email" >Email</label>
               </div>
               <div id="email_error">Please fill your Email</div>
               <div class="inputBox">
-                <textarea required="required" id="pesan">
-              </textarea>
+                <textarea id="pesan"></textarea>
              <label for="pesan">Type your Message...</label>
+             <div id="pesan_error">Please fill your Messages</div>
             </div>
             <div class="inputBox">
-              <button type="submit" class="rounded">
+              <button class="rounded">
                 <div class="svg-wrapper-1">
                   <div class="svg-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -226,5 +226,6 @@
       AOS.init();
     </script>
     <script src="https://kit.fontawesome.com/281903bb26.js" crossorigin="anonymous"></script>
+    <script src="./JS/index.js"></script>
   </body>
 </html>
